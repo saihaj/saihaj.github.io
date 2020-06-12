@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "frontmatter",
+        "linebreak",
+        "parens"
+    ],
+    "files.autoSave": "onFocusChange",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+    },
+}
