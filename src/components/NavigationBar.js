@@ -5,14 +5,19 @@ import { Nav, Navbar } from 'react-bootstrap'
 
 const TopNavbar = styled( Navbar )`
 font-size: large;
+`
+
+const NavLink = styled( Link )`
+color: var(--dark);
 a {
-   color: black;
-   text-decoration: none;
-   background-color: transparent;
- }
- a:hover {
-   color: #bbbbbb;
- }
+  color: var(--dark);
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  color: var(--dark);
+}
+
 `
 
 const Brand = styled( Navbar.Brand )`
@@ -38,12 +43,12 @@ padding: 2px;
 
 const Navigation = () => (
   <TopNavbar expand="sm" sticky="bottom" bg="primary">
-    <Brand><Link to="/">Saihajpreet Singh</Link></Brand>
+    <Brand><NavLink to="/">Saihajpreet Singh</NavLink></Brand>
     <Navbar.Collapse id="basic-navbar-nav">
       <NavItems className="ml-auto">
-        <NavItem><Link to="/about">About</Link></NavItem>
-        <NavItem><Link to="/contact">Contact</Link></NavItem>
-        <NavItem><Link to="/projects">Projects</Link></NavItem>
+        <NavItem><NavLink to="/about">About</NavLink></NavItem>
+        <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
+        <NavItem><NavLink to="/projects">Projects</NavLink></NavItem>
       </NavItems>
     </Navbar.Collapse>
   </TopNavbar>
