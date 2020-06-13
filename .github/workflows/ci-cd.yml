@@ -2,7 +2,7 @@ name: Deploy
 
 on:
     push:
-      branches: [master]
+      branches: [dev]
 
 jobs:
     deploy:
@@ -33,5 +33,6 @@ jobs:
               keep_history: true
               allow_empty_commit: false
               commit_message: ${{ github.event.head_commit.message }}
+              target_branch: master
             env:
               GH_PAT: ${{ secrets.deploy_access_token }}
