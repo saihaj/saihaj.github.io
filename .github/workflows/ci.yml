@@ -4,6 +4,7 @@ on:
     push:
       branches-ignore:
        - dev
+    pull-request:
 
 jobs:
     deploy:
