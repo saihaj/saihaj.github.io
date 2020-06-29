@@ -8,7 +8,7 @@
     "@mdx-js/react": "^1.6.5",
     "gatsby": "^2.23.3",
     "gatsby-plugin-manifest": "^2.4.11",
-    "gatsby-plugin-mdx": "^1.2.15",
+    "gatsby-plugin-mdx": "^1.2.18",
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-source-filesystem": "^2.3.11",
