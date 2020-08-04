@@ -12,6 +12,7 @@ module.exports = {
         name: 'Saihajpreet Singh',
         short_name: 'saihaj',
         start_url: '/',
+        icon: './static/favicon.png',
       },
     },
   ],
