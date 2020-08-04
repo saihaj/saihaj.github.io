@@ -31,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^4.2.5",
     "typescript": "^3.9.7"
   },
   "keywords": [
@@ -44,5 +45,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --color"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
