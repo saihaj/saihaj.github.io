@@ -13,6 +13,6 @@ module.exports = {
         short_name: 'saihaj',
         start_url: '/',
       },
-    }
+    },
   ],
 }
