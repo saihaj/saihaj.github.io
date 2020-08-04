@@ -2,7 +2,7 @@ name: Deploy
 
 on:
     push:
-      branches: [dev]
+      branches: [master]
 
 jobs:
     deploy:
@@ -40,6 +40,5 @@ jobs:
               build_dir: public
               committer: saihaj <saihaj@users.noreply.github.com>
               author: saihaj <saihaj@users.noreply.github.com>
-              target_branch: master
             env:
               GH_PAT: ${{ secrets.deploy_access_token }}
