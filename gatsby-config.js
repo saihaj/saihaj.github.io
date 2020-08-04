@@ -12,7 +12,26 @@ module.exports = {
         name: 'Saihajpreet Singh',
         short_name: 'saihaj',
         start_url: '/',
-        icon: './static/favicon.png',
+        icon: './static/images/favicon.png',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/images`,
+        name: 'images',
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-better-jss',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'source sans pro\:Bold 700',
+        ],
+        display: 'swap',
       },
     },
   ],
