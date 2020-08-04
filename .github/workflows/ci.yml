@@ -3,7 +3,7 @@ name: Linting
 on:
     push:
       branches-ignore:
-       - dev
+       - master
     pull_request:
 
 jobs:
