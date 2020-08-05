@@ -6,11 +6,6 @@ import { createUseStyles } from 'react-jss'
 import SEO from '../components/Seo'
 
 const useStyles = createUseStyles( {
-  '@global': {
-    body: {
-      backgroundColor: '#95A5A6',
-    },
-  },
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -18,9 +13,10 @@ const useStyles = createUseStyles( {
   },
   title: {
     color: 'white',
-    fontFamily: 'Source Sans Pro',
+    fontFamily: 'Rubik',
     fontSize: '4.7rem',
     paddingTop: '15vh',
+    fontWeight: '900',
   },
   memoji: {
     width: '300px',
