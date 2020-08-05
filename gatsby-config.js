@@ -30,7 +30,9 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'source sans pro\:Bold 700',
+          'Fugaz One',
+          'Fira Sans',
+          'Rubik\:400,400i,900',
         ],
         display: 'swap',
       },
