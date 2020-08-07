@@ -11,7 +11,9 @@ const setupJss = () => {
   const globalStyleSheet = jss.createStyleSheet( {
     '@global': {
       body: {
-        backgroundColor: '#95A5A6',
+        backgroundColor: '#03045e',
+        fontFamily: 'Fira Sans',
+        color: 'white',
       },
     },
   } ).attach()
