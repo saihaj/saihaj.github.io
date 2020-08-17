@@ -14,7 +14,7 @@
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.12",
     "jss": "^10.3.0",
-    "jss-preset-default": "^10.3.0",
+    "jss-preset-default": "^10.4.0",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
