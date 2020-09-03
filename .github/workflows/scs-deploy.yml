@@ -1,0 +1,44 @@
+name: Deploy To SCS
+
+on:
+    push:
+      branches: [deploy-scs]
+
+jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+
+          - name: Use Node.js 12.x
+            uses: actions/setup-node@v1
+            with:
+              node-version: 12.x
+
+          - name: Restore npm cache
+            uses: actions/cache@v2
+            id: cache
+            with:
+              path: ~/.npm
+              key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+              restore-keys: |
+                ${{ runner.os }}-node-
+
+          - name: Install dependencies
+            run: npm ci
+
+          - name: Run Linter
+            run: npm run lint
+
+          - name: Run Build
+            run: npm run build
+          
+          - name: Publish to SCS Server
+            uses: burnett01/rsync-deployments@4.1
+            with:
+              path: public
+              remote_path: public_html
+              remote_host: ${{ secrets.REMOTE_HOST }}
+              remote_user: ${{ secrets.REMOTE_USER }}
+              remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
