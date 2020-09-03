@@ -34,9 +34,20 @@ jobs:
           - name: Run Build
             run: npm run build
           
+          - name: Create SSH key
+            run: |
+              mkdir -p ~/.ssh/
+              echo "$SSH_PRIVATE_KEY" > ../private.key
+              sudo chmod 600 ../private.key
+            shell: bash
+            env:
+              SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+              SSH_KEY_PATH: ${{ github.workspace }}/../private.key
+
           - name: Publish to SCS Server
             uses: burnett01/rsync-deployments@4.1
             with:
+              switches: -e "ssh -o StrictHostKeyChecking=no"
               path: public
               remote_path: /home/4user3/saihajsingh/public_html
               remote_host: ${{ secrets.REMOTE_HOST }}
