@@ -1,35 +1,7 @@
 import React from 'react'
-import { createUseStyles } from 'react-jss'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Typical from 'react-typical'
-
-const useStyles = createUseStyles( {
-  container: {
-    height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  wrapper: {
-    marginTop: '20vh',
-  },
-  name: {
-    textAlign: 'center',
-    fontFamily: 'Fugaz One',
-    fontSize: '4rem',
-    margin: 0,
-  },
-  memoji: {
-    marginRight: 'auto',
-    marginLeft: 'auto',
-    width: '16rem',
-  },
-  intro: {
-    textAlign: 'center',
-    fontSize: '2rem',
-    marginTop: 15,
-  },
-} )
 
 const intro = [
   'Hey there 👋 !', 1000,
@@ -40,8 +12,6 @@ const intro = [
 ]
 
 const Hero = () => {
-  const styles = useStyles()
-
   const { file: { childImageSharp } } = useStaticQuery( graphql`
   query FaviconImage {
     file( sourceInstanceName: { eq: "images" }, name: { eq: "favicon" } ) {
@@ -55,16 +25,11 @@ const Hero = () => {
 ` )
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <Img className={styles.memoji} alt="Saihajpreet Singh's Memoji" fluid={childImageSharp.fluid} />
-        <h1 className={styles.name}>Saihajpreet Singh</h1>
-        <Typical
-          wrapper="h3"
-          steps={intro}
-          loop={Infinity}
-          className={styles.intro}
-        />
+    <div className="flex h-screen items-center justify-center">
+      <div className="-mt-24">
+        <Img alt="Saihajpreet Singh's Memoji" className="mx-auto w-64" fluid={childImageSharp.fluid} />
+        <h1 className="font-fugaz text-6xl text-center">Saihajpreet Singh</h1>
+        <Typical className="text-center text-3xl" wrapper="h3" steps={intro} loop={Infinity} />
       </div>
     </div>
   )
