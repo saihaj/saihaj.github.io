@@ -1,4 +1,7 @@
 /* eslint-disable no-useless-escape */
+/* eslint-disable global-require */
+const tailwindConfig = require( './tailwind.config.js' )
+
 module.exports = {
   siteMetadata: {
     title: 'Saihajpreet Singh',
@@ -25,7 +28,6 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-better-jss',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -35,6 +37,27 @@ module.exports = {
           'Rubik\:400,400i,900',
         ],
         display: 'swap',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          // eslint-disable-next-line import/no-extraneous-dependencies
+          require( 'tailwindcss' )( tailwindConfig ),
+          // eslint-disable-next-line import/no-extraneous-dependencies
+          require( 'autoprefixer' ),
+          ...( process.env.NODE_ENV === 'production'
+          // eslint-disable-next-line import/no-extraneous-dependencies
+            ? [ require( 'cssnano' ) ]
+            : [] ),
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        tailwind: true,
       },
     },
   ],
