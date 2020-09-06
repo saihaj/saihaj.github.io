@@ -27,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
     "autoprefixer": "^9.8.6",
+    "cspell": "^4.1.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -48,11 +49,12 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --color"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --color",
+    "check:spelling": "cspell 'src/**'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run check:spelling"
     }
   }
 }
