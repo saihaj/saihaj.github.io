@@ -1,26 +1,11 @@
+const defaultTheme = require( 'tailwindcss/defaultTheme' )
+
 module.exports = {
-  purge: [
-    './src/**/*.[jt]s?(x)',
-  ],
+  purge: [ './src/**/*.[jt]s?(x)' ],
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          '"Fira Sans"',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          '"Noto Sans"',
-          'sans-serif',
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
+        sans: [ '"Fira Sans"', ...defaultTheme.fontFamily.sans ],
         fugaz: [ '"Fugaz One"' ],
       },
     },
@@ -28,5 +13,6 @@ module.exports = {
   variants: {},
   future: {
     removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
 }

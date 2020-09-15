@@ -43,7 +43,6 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
-          // eslint-disable-next-line import/no-extraneous-dependencies
           require( 'tailwindcss' )( tailwindConfig ),
           // eslint-disable-next-line import/no-extraneous-dependencies
           require( 'autoprefixer' ),
