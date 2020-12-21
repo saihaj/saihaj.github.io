@@ -3,6 +3,14 @@
 const tailwindConfig = require( './tailwind.config.js' )
 
 module.exports = {
+  flags: {
+    PARALLEL_SOURCING: true,
+    FAST_DEV: true,
+    DEV_SSR: true,
+    QUERY_ON_DEMAND: true,
+    LAZY_IMAGES: true,
+    FAST_REFRESH: true,
+  },
   siteMetadata: {
     title: 'Saihajpreet Singh',
     description: 'Personal Portfolio',
