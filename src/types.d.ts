@@ -1,4 +1,3 @@
-declare module 'react-typical';
 declare module '*.svg' {
     import React = require( 'react' );
 
