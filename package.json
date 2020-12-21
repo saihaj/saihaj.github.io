@@ -40,6 +40,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.2.5",
     "postcss": "^8.2.1",
+    "prettier": "^2.2.1",
     "tailwindcss": "^2.0.2",
     "typescript": "^4.1.2"
   },
@@ -55,6 +56,7 @@
     "clean": "gatsby clean",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --color",
     "check:spelling": "cspell 'src/**'"
+    "prettier": "prettier . --write"
   },
   "husky": {
     "hooks": {

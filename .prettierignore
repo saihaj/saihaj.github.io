@@ -1,0 +1,11 @@
+.cache/
+node_modules/
+public/
+**/*.ts
+**/*.tsx
+!postcss.config.js
+!tailwind.config.js
+!commitlint.config.js
+!cspell.json
+!gastby-*.js
+!tsconfig.json

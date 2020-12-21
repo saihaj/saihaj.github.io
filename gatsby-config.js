@@ -47,11 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          'Fugaz One',
-          'Fira Sans',
-          'Rubik\:400,400i,900',
-        ],
+        fonts: [ 'Fugaz One', 'Fira Sans', 'Rubik:400,400i,900' ],
         display: 'swap',
       },
     },
@@ -63,8 +59,8 @@ module.exports = {
           // eslint-disable-next-line import/no-extraneous-dependencies
           require( 'autoprefixer' ),
           ...( process.env.NODE_ENV === 'production'
-          // eslint-disable-next-line import/no-extraneous-dependencies
-            ? [ require( 'cssnano' ) ]
+            ? // eslint-disable-next-line import/no-extraneous-dependencies
+            [ require( 'cssnano' ) ]
             : [] ),
         ],
       },

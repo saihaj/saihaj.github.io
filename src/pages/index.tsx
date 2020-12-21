@@ -1,8 +1,7 @@
-import { FC } from 'react'
 import Seo from '../components/Seo'
 import Hero from '../components/Hero'
 
-const IndexPage:FC = () => (
+const IndexPage = () => (
   <div>
     <Seo title="Home" />
     <Hero />

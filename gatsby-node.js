@@ -19,18 +19,18 @@ exports.createPages = async ( { actions, graphql, reporter } ) => {
   const { createPage } = actions
 
   const result = await graphql( `
-  query AllContentPages {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            layout
+    query AllContentPages {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              layout
+            }
           }
         }
       }
     }
-  }
   ` )
 
   if ( result.errors ) reporter.panicOnBuild( '🚨  ERROR: Loading "createPages" query' )
@@ -39,15 +39,25 @@ exports.createPages = async ( { actions, graphql, reporter } ) => {
 
   // Call `createPage` for each page
   pages
-    .filter( ( { node: { frontmatter: { layout } } } ) => layout )
-    .forEach( ( { node: {
-      id,
-      frontmatter: { layout, permalink },
-    } } ) => {
-      createPage( {
-        path: permalink,
-        component: path.resolve( `src/templates/${layout}.js` ),
-        context: { id },
-      } )
-    } )
+    .filter(
+      ( {
+        node: {
+          frontmatter: { layout },
+        },
+      } ) => layout,
+    )
+    .forEach(
+      ( {
+        node: {
+          id,
+          frontmatter: { layout, permalink },
+        },
+      } ) => {
+        createPage( {
+          path: permalink,
+          component: path.resolve( `src/templates/${layout}.js` ),
+          context: { id },
+        } )
+      },
+    )
 }
