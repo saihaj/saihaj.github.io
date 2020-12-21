@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.2.5",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.2.1",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.0.2",
@@ -55,8 +56,13 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --color",
-    "check:spelling": "cspell 'src/**'"
-    "prettier": "prettier . --write"
+    "lint:format": "npm run lint -- --fix",
+    "check:spelling": "cspell 'src/**'",
+    "check:types": "tsc",
+    "check:prettier": "prettier . --check",
+    "check": "run-p check:* lint -l",
+    "prettier": "prettier . --write",
+    "format": "run-s prettier lint:format"
   },
   "husky": {
     "hooks": {

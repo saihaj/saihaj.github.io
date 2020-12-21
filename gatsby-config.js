@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-useless-escape */
 /* eslint-disable global-require */
 const tailwindConfig = require( './tailwind.config.js' )
@@ -56,11 +57,9 @@ module.exports = {
       options: {
         postCssPlugins: [
           require( 'tailwindcss' )( tailwindConfig ),
-          // eslint-disable-next-line import/no-extraneous-dependencies
           require( 'autoprefixer' ),
           ...( process.env.NODE_ENV === 'production'
-            ? // eslint-disable-next-line import/no-extraneous-dependencies
-            [ require( 'cssnano' ) ]
+            ? [ require( 'cssnano' ) ]
             : [] ),
         ],
       },

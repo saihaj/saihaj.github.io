@@ -1,12 +1,13 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+/* eslint-disable import/no-extraneous-dependencies */
+const defaultTheme = require( 'tailwindcss/defaultTheme' )
 
 module.exports = {
-  purge: ['./src/**/*.[jt]s?(x)'],
+  purge: [ './src/**/*.[jt]s?(x)' ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Fira Sans"', ...defaultTheme.fontFamily.sans],
-        fugaz: ['"Fugaz One"'],
+        sans: [ '"Fira Sans"', ...defaultTheme.fontFamily.sans ],
+        fugaz: [ '"Fugaz One"' ],
       },
     },
   },
