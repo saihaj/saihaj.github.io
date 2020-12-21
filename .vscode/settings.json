@@ -1,14 +1,24 @@
 {
-    "cSpell.words": [
-        "frontmatter",
-        "linebreak",
-        "parens"
-    ],
-    "files.autoSave": "onFocusChange",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-    },
-    "conventionalCommits.scopes": [
-        "deps"
-    ],
+  "cSpell.words": ["frontmatter", "linebreak", "parens"],
+  "files.autoSave": "onFocusChange",
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "conventionalCommits.scopes": ["deps"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
