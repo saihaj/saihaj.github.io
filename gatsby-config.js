@@ -78,5 +78,6 @@ module.exports = {
         tailwind: true,
       },
     },
+    'gatsby-plugin-preload-fonts',
   ],
 }

@@ -1,13 +1,15 @@
 {
+  "version": "0.1",
   "language": "en",
   "ignorePaths": ["package.json", "package-lock.json"],
   "words": [
-    "Saihajpreet Singh",
+    "memoji",
+    "preload",
     "Saihaj",
     "Saihajpreet",
-    "webp",
-    "memoji",
+    "Saihajpreet Singh",
+    "semibold",
     "tailwindcss",
-    "semibold"
+    "webp"
   ]
 }
