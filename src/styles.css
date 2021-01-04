@@ -6,3 +6,11 @@ body {
   background-color: #03045e;
   color: white;
 }
+
+@layer utilities {
+  /* Add border to child elements. Makes it easy to debug. */
+  .debug * {
+    border-color: white;
+    border-width: 1px;
+  }
+}
