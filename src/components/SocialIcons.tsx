@@ -7,7 +7,7 @@ type IconProps ={
 }
 
 const Icon = ( { url, svg: Svg }:IconProps ) => (
-  <a href={url} target="_blank" rel="noreferrer" className="fill-current hover:text-gray-400">
+  <a href={url} target="_blank" rel="noreferrer" className="fill-current text-white hover:text-gray-400">
     <Svg />
   </a>
 )
