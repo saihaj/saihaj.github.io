@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [ 'Fugaz One', 'Fira Sans', 'Rubik:400,400i,900' ],
+        fonts: [ 'Fugaz One', 'Fira Sans', 'Rubik:400,400i,500,600,700,800,900' ],
         display: 'swap',
       },
     },
