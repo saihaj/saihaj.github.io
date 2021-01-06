@@ -43,12 +43,12 @@ const AboutHero = ( { className, ...props }: AboutHeroProps ) => {
     <section className={cx( 'flex flex-col', className )} {...props}>
 
       <div>
-        <h3 className="font-fugaz text-3xl mb-2">About</h3>
+        <h2 className="font-fugaz text-3xl mb-2">About</h2>
         <HTMLContent className="text-xl leading-6 tracking-wide">{about.html}</HTMLContent>
       </div>
 
       <div className="mt-16">
-        <h3 className="font-fugaz text-3xl mb-2">Skills</h3>
+        <h2 className="font-fugaz text-3xl mb-2">Skills</h2>
 
         <div className="flex flex-wrap justify-center">
           {SKILLS.map( ( values:{name:string} ) => (
