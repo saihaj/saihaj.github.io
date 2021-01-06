@@ -1,11 +1,16 @@
 import Seo from '../components/Seo'
 import Hero from '../components/Hero'
+import About from '../components/About'
+import Container from '../components/Container'
 
 const IndexPage = () => (
-  <div>
+  <>
     <Seo title="Home" />
     <Hero />
-  </div>
+    <Container>
+      <About className="pb-56" />
+    </Container>
+  </>
 )
 
 export default IndexPage
