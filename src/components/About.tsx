@@ -4,23 +4,7 @@ import cx from 'classnames'
 
 import SectionHeader from './SectionHeader'
 import HTMLContent from './HTMLContent'
-
-type SkillItemProp = {
-  label: string,
-  className?: string
-}
-
-const SkillItem = ( { label, className }:SkillItemProp ) => (
-  <div className={cx(
-    'px-6 bg-white rounded-lg',
-    'text-theme-primary text-center text-md md:text-lg font-semibold',
-    'my-1 mx-2',
-    className,
-  )}
-  >
-    {label}
-  </div>
-)
+import SkillTile from './SkillTile'
 
 type AboutHeroProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
@@ -52,7 +36,7 @@ const AboutHero = ( { className, ...props }: AboutHeroProps ) => {
         <SectionHeader name="Skills" />
         <div className="flex flex-wrap justify-center">
           {SKILLS.map( ( values:{name:string} ) => (
-            <SkillItem key={values.name} label={values.name} />
+            <SkillTile key={values.name} label={values.name} />
           ) )}
         </div>
       </div>
