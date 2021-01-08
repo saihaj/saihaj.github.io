@@ -31,8 +31,29 @@ jobs:
       - name: Run Linter
         run: npm run lint
 
+      - name: Cache Gatsby `.cache`
+        uses: actions/cache@v2
+        id: gatsby-cache-folder
+        with:
+          path: .cache
+          key: ${{ runner.os }}-cache-gatsby
+          restore-keys: |
+            ${{ runner.os }}-cache-gatsby
+
+      - name: Cache Gatsby `public`
+        uses: actions/cache@v2
+        id: gatsby-cache-public
+        with:
+          path: .cache
+          key: ${{ runner.os }}-public-gatsby
+          restore-keys: |
+            ${{ runner.os }}-public-gatsby
+
       - name: Run Build
         run: npm run build
+        env:
+          GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+          NODE_ENV: production
 
       - name: Deploy to GH Pages
         uses: crazy-max/ghaction-github-pages@v2
