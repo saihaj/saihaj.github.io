@@ -1,9 +1,11 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import cx from 'classnames'
 
-import SocialIcons from './SocialIcons'
+import type { SectionProps } from './types'
+import SocialIcons from '../SocialIcons'
 
-const Hero = () => {
+const Hero = ( { className, ...props }: SectionProps ) => {
   const { file: { childImageSharp } } = useStaticQuery( graphql`
   query FaviconImage {
     file( sourceInstanceName: { eq: "images" }, name: { eq: "me" } ) {
@@ -17,7 +19,7 @@ const Hero = () => {
 ` )
 
   return (
-    <div className="flex h-screen items-center justify-center">
+    <section className={cx( 'flex h-screen items-center justify-center', className )} {...props}>
       <div className="-mt-24">
 
         <div className="flex">
@@ -33,7 +35,7 @@ const Hero = () => {
         <SocialIcons />
 
       </div>
-    </div>
+    </section>
   )
 }
 

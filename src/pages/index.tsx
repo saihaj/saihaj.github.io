@@ -1,15 +1,14 @@
 import Seo from '../components/Seo'
-import Hero from '../components/Hero'
-import About from '../components/About'
+import { AboutSection, MainSection } from '../components/sections'
 import Container from '../components/Container'
 import Footer from '../components/Footer'
 
 const IndexPage = () => (
   <>
     <Seo title="Home" />
-    <Hero />
+    <MainSection />
     <Container>
-      <About className="pb-56" />
+      <AboutSection className="pb-56" />
     </Container>
     <Footer />
   </>

@@ -1,14 +1,12 @@
-import { HTMLAttributes, DetailedHTMLProps } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import cx from 'classnames'
 
-import SectionHeader from './SectionHeader'
-import HTMLContent from './HTMLContent'
-import SkillTile from './SkillTile'
+import type { SectionProps } from './types'
+import SectionHeader from '../SectionHeader'
+import HTMLContent from '../HTMLContent'
+import SkillTile from '../SkillTile'
 
-type AboutHeroProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
-
-const AboutHero = ( { className, ...props }: AboutHeroProps ) => {
+const AboutHero = ( { className, ...props }: SectionProps ) => {
   const { about, skills: { childContentJson: { values: SKILLS } } } = useStaticQuery( graphql`
     query AboutSection {
       about: markdownRemark(frontmatter: {title: {eq: "About"}}) {
@@ -44,4 +42,5 @@ const AboutHero = ( { className, ...props }: AboutHeroProps ) => {
     </section>
   )
 }
+
 export default AboutHero
