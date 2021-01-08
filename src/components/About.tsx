@@ -2,6 +2,7 @@ import { HTMLAttributes, DetailedHTMLProps } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import cx from 'classnames'
 
+import SectionHeader from './SectionHeader'
 import HTMLContent from './HTMLContent'
 
 type SkillItemProp = {
@@ -43,13 +44,12 @@ const AboutHero = ( { className, ...props }: AboutHeroProps ) => {
     <section className={cx( 'flex flex-col', className )} {...props}>
 
       <div>
-        <h2 className="font-fugaz text-3xl mb-2">About</h2>
+        <SectionHeader name="About" />
         <HTMLContent className="text-xl leading-6 tracking-wide">{about.html}</HTMLContent>
       </div>
 
       <div className="mt-16">
-        <h2 className="font-fugaz text-3xl mb-2">Skills</h2>
-
+        <SectionHeader name="Skills" />
         <div className="flex flex-wrap justify-center">
           {SKILLS.map( ( values:{name:string} ) => (
             <SkillItem key={values.name} label={values.name} />
