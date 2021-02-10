@@ -80,5 +80,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-preload-fonts',
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      trackingIds: [
+        'G-C9H508NH16',
+      ],
+    },
   ],
 }
