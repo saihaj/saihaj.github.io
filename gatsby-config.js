@@ -80,5 +80,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-preload-fonts',
+    {
+      resolve: 'gatsby-plugin-gtag',
+      options: {
+        trackingId: 'G-C9H508NH16',
+      },
+    },
   ],
 }
