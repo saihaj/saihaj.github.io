@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import cx from 'classnames'
 
 import type { SectionProps } from './types'
@@ -8,11 +8,9 @@ import SocialIcons from '../SocialIcons'
 const Hero = ( { className, ...props }: SectionProps ) => {
   const { file: { childImageSharp } } = useStaticQuery( graphql`
   query FaviconImage {
-    file( sourceInstanceName: { eq: "images" }, name: { eq: "me" } ) {
+    file(sourceInstanceName: {eq: "images"}, name: {eq: "me"}) {
       childImageSharp {
-        fluid(quality:100, maxWidth:800) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
       }
     }
   }
@@ -25,7 +23,7 @@ const Hero = ( { className, ...props }: SectionProps ) => {
         <div className="flex">
           <div className="mx-auto">
             <div className="border-theme-secondary border-8 rounded-full inline-block">
-              <Img alt="Saihajpreet Singh's Memoji" className="w-48 rounded-full" fluid={childImageSharp.fluid} />
+              <GatsbyImage alt="Saihajpreet Singh's Memoji" className="w-48 rounded-full" image={childImageSharp.gatsbyImageData} />
             </div>
           </div>
         </div>
