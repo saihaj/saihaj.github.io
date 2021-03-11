@@ -15,6 +15,11 @@ module.exports = {
           secondary: '#95A5A6',
         },
       },
+      strokeWidth: {
+        3: '3',
+        4: '4',
+        5: '5',
+      },
     },
   },
   variants: {},
