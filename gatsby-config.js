@@ -72,6 +72,7 @@ module.exports = {
         tailwind: true,
       },
     },
+    'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-gtag',
