@@ -9,6 +9,11 @@ import Button from '../components/Button'
 
 const useStyles = createUseStyles( {
   main: {
+    '& p': {
+      margin: 0,
+      padding: 0,
+      lineHeight: '1.8rem',
+    },
   },
   name: {
     margin: 0,
@@ -39,14 +44,17 @@ const useStyles = createUseStyles( {
       marginLeft: 0,
       marginTop: '0.5rem',
       alignItems: 'center',
+      marginBottom: '3rem',
     },
   },
   imgWrapper: {
     marginTop: '3rem',
     display: 'flex',
+    marginBottom: '4rem',
     [ widthLessThan( Breakpoints.tablet ) ]: {
       flexDirection: 'column',
       alignItems: 'center',
+      marginBottom: 0,
     },
   },
 } )
@@ -59,6 +67,7 @@ const Home = () => {
       <Seo />
 
       <main className={styles.main}>
+
         <div className={styles.imgWrapper}>
           <Image className={styles.img} src="/images/me.png" width={120} height={120} quality={100} priority layout="fixed" />
           <div className={styles.navWrapper}>
@@ -69,6 +78,27 @@ const Home = () => {
             </nav>
           </div>
         </div>
+
+        <p>
+          Greetings!
+          <br />
+          <br />
+          I am a second year computer science student at
+          Carleton University with honors in Internet Security.
+          <br />
+          <br />
+          I am interested in web development, mobile development, {' '}
+          serverless computing, developer tooling, distributed systems, and cloud infrastructure.
+          <br />
+          <br />
+          In my free time I contribute to Open Source projects. {' '}
+          I help maintain <a href="https://github.com/shabados/theme-tool#people" target="_blank" rel="noreferrer">shabados/theme-tool</a> and <a href="https://github.com/shabados/docs#people" target="_blank" rel="noreferrer">shabados/docs</a>.
+          Member of <a href="https://github.com/graphql/graphql-js-wg" target="_blank" rel="noreferrer">GraphQL JS working group</a>. {' '}
+          Working on <a href="https://github.com/shabados/website#people" target="_blank" rel="noreferrer">redesign of shabados.com</a>, {' '}
+          <a href="https://github.com/shabados/mobile/graphs/contributors" target="_blank" rel="noreferrer">ShabadOS mobile app</a> and {' '}
+          <a href="https://github.com/graphql/graphql-js/pull/2828" target="_blank" rel="noreferrer">migrating GraphQL JS to TypeScript</a>.
+        </p>
+
       </main>
 
       <Footer />
