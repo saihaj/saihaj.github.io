@@ -18,5 +18,21 @@ export const globalStyles = {
       color: Colors.white,
       fontSize: '1.5rem',
     },
+    '#__next': {
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    a: {
+      color: Colors.white,
+      padding: 0,
+      margin: 0,
+      textDecorationThickness: 1.5,
+      textDecorationStyle: 'dotted',
+      textUnderlineOffset: '0.15rem',
+      '&:hover': {
+        opacity: 0.79,
+      },
+    },
   },
 }
