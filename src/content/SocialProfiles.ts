@@ -1,44 +1,35 @@
-import CV from '../../static/svg/cv.inline.svg'
-import Email from '../../static/svg/email.inline.svg'
-import Facebook from '../../static/svg/facebook.inline.svg'
-import Github from '../../static/svg/github.inline.svg'
-import Instagram from '../../static/svg/instagram.inline.svg'
-import LinkedIn from '../../static/svg/linkedIn.inline.svg'
-import Reddit from '../../static/svg/reddit.inline.svg'
-import Twitter from '../../static/svg/twitter.inline.svg'
+import { GithubIcon, MailIcon, TwitterIcon, LinkedinIcon, FacebookIcon, InstagramIcon } from '../components/SocialIcons'
 
 const SOCIAL_PROFILES = [
   {
-    url: 'https://github.com/saihaj',
-    svg: Github,
-  },
-  {
+    name: 'Email',
     url: 'mailto:saihajpreet.sigh@gmail.com',
-    svg: Email,
+    svg: MailIcon,
   },
   {
+    name: 'GitHub',
+    url: 'https://github.com/saihaj',
+    svg: GithubIcon,
+  },
+  {
+    name: 'Twitter',
     url: 'https://twitter.com/singh_saihaj',
-    svg: Twitter,
+    svg: TwitterIcon,
   },
   {
+    name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/saihajpreet-singh-a1201274/',
-    svg: LinkedIn,
+    svg: LinkedinIcon,
   },
   {
-    url: 'https://www.facebook.com/SPS1319',
-    svg: Facebook,
-  },
-  {
-    url: 'https://www.reddit.com/user/saihajpreet',
-    svg: Reddit,
-  },
-  {
-    url: 'https://github.com/saihaj/career',
-    svg: CV,
-  },
-  {
+    name: 'Instagram',
     url: 'https://www.instagram.com/saihajpreet/',
-    svg: Instagram,
+    svg: InstagramIcon,
+  },
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/SPS1319',
+    svg: FacebookIcon,
   },
 ]
 
