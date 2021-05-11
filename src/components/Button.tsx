@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, ButtonHTMLAttributes, ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
-import cx from 'classnames'
+import cx from 'clsx'
 
 import { Colors } from '../theme'
 
