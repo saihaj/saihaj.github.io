@@ -47,7 +47,10 @@ export const globalStyles = {
       textDecorationStyle: 'dotted',
       textUnderlineOffset: '0.15rem',
       '&:hover': {
-        opacity: 0.79,
+        color: Colors.yellow,
+        '& svg > *': {
+          stroke: Colors.yellow,
+        },
       },
     },
     ':focus': {
