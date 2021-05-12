@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
 
+import { GA_TRACKING_ID } from '../lib/gtag'
+
 export default class MyDocument extends Document {
   static async getInitialProps( ctx:DocumentContext ) {
     const registry = new SheetsRegistry()
@@ -53,6 +55,16 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#000814" />
           <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
           <meta name="theme-color" content="#000814" />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          <script dangerouslySetInnerHTML={{ __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', ${GA_TRACKING_ID},{
+              page_path: window.location.pathname,
+            });
+          ` }}
+          />
         </Head>
         <body>
           <Main />
