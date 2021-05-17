@@ -1,9 +1,9 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { createUseStyles } from 'react-jss'
 
 import { widthLessThan, Breakpoints, Colors } from '../theme'
 import Button from '../components/Button'
+import Link from './Anchor'
 
 const useStyles = createUseStyles( {
   main: {

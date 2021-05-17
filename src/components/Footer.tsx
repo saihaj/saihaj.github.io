@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 
 import PROFILES from '../content/SocialProfiles'
+import Anchor from './Anchor'
 
 const useStyles = createUseStyles( {
   main: {
@@ -21,7 +22,9 @@ const Footer = () => {
   return (
     <footer className={styles.main}>
       {PROFILES.map( ( { name, url, svg: Icon } ) => (
-        <a key={url} aria-label={name} href={url} target="_blank" rel="noreferrer"><Icon /></a>
+        <Anchor key={url} aria-label={name} href={url}>
+          <Icon />
+        </Anchor>
       ) )}
     </footer>
   )
