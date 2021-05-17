@@ -1,37 +1,44 @@
-import type { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react'
+import type { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
+import { MDXProvider } from '@mdx-js/react'
 
-import Seo, { SeoProps } from '../components/Seo'
-import Footer from '../components/Footer'
-import Navbar from './Navbar'
+import { MDXFrontMatter } from '../lib/types'
+import Layout, { LayoutProps } from './Layout'
+import Anchor from './Anchor'
 
 const useStyles = createUseStyles( {
   main: {
     '& p': {
       margin: 0,
+      marginBottom: '1rem',
       padding: 0,
       lineHeight: '1.8rem',
     },
   },
-
 } )
 
 type PageProps = {
-    children:ReactNode,
-} & DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & SeoProps;
+  children:ReactNode,
+  frontMatter: MDXFrontMatter
+} & LayoutProps
 
-const Page = ( { children, title, description, ...props }:PageProps ) => {
+const Page = ( { children, title, description, frontMatter, className, ...props }:PageProps ) => {
   const styles = useStyles()
 
   return (
-    <>
-      <Seo title={title} description={description} />
-      <main className={styles.main} {...props}>
-        <Navbar />
+    <Layout
+      title={frontMatter?.title ?? title}
+      description={frontMatter?.description ?? description}
+      className={styles.main}
+      {...props}
+    >
+      <MDXProvider components={{
+        a: Anchor,
+      }}
+      >
         {children}
-      </main>
-      <Footer />
-    </>
+      </MDXProvider>
+    </Layout>
   )
 }
 
