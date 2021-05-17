@@ -1,44 +1,74 @@
 {
   "values": [
     {
+      "name": "ShabadOS/theme-tool",
+      "role": "Author",
+      "github": "https://github.com/shabados/theme-tool"
+    },
+    {
+      "name": "ShabadOS/docs",
+      "role": "Maintainer",
+      "github": "https://github.com/shabados/docs"
+    },
+    {
+      "name": "GraphQL/graphql-js",
+      "role": "Contributor",
+      "github": "https://github.com/graphql/graphql-js"
+    },
+    {
       "name": "Senior Dialer App",
-      "url": "https://github.com/saihaj/SeniorDialerApp"
+      "role": "Author",
+      "github": "https://github.com/saihaj/SeniorDialerApp"
     },
     {
-      "name": "CRA + Relay + TS",
-      "url": "https://github.com/saihaj/cra-relay-typescript"
+      "name": "ShabadOS/mobile",
+      "role": "Contributor",
+      "github": "https://github.com/shabados/mobile"
     },
     {
-      "name": "GraphQL GurbaniNow",
-      "url": "https://github.com/saihaj/graphql-gurbani-azure-func"
+      "name": "ShabadOS/presenter",
+      "role": "Contributor",
+      "github": "https://github.com/shabados/presenter"
     },
     {
-      "name": "EmailTheForm",
-      "url": "https://github.com/saihaj/emailtheform"
+      "name": "ShabadOS/viewier",
+      "role": "Contributor",
+      "github": "https://github.com/shabados/viewer"
     },
     {
-      "name": "The Ultimate MovieDB",
-      "url": "https://github.com/saihaj/TheUltimateMovieDB"
+      "name": "Sangat.Live/cga",
+      "role": "Author",
+      "github": "https://github.com/sangat-live/cga"
     },
     {
       "name": "Personal Portfolio",
-      "url": "https://github.com/saihaj/saihaj.github.io"
+      "role": "Author",
+      "github": "https://github.com/saihaj/saihaj.github.io"
     },
     {
-      "name": "CV + Resumé",
-      "url": "https://github.com/saihaj/career"
+      "name": "EmailTheForm",
+      "role": "Author",
+      "github": "https://github.com/saihaj/emailtheform"
+    },
+    {
+      "name": "CRA + Relay + TS",
+      "role": "Archived",
+      "github": "https://github.com/saihaj/cra-relay-typescript"
+    },
+    {
+      "name": "The Ultimate MovieDB",
+      "role": "Archived",
+      "github": "https://github.com/saihaj/TheUltimateMovieDB"
+    },
+    {
+      "name": "GraphQL GurbaniNow",
+      "role": "Archived",
+      "github": "https://github.com/saihaj/graphql-gurbani-azure-func"
     },
     {
       "name": "Edureka Data Science",
-      "url": "https://github.com/saihaj/EdurekaPythonDataScienceCertification2019"
-    },
-    {
-      "name": "ShabadOS Theme Tool",
-      "url": "https://github.com/shabados/theme-tool"
-    },
-    {
-      "name": "ShabadOS Docs",
-      "url": "https://github.com/shabados/docs"
+      "role": "Archived",
+      "github": "https://github.com/saihaj/EdurekaPythonDataScienceCertification2019"
     }
   ]
 }

@@ -67,7 +67,7 @@ const Navbar = () => {
           </Link>
         </h1>
         <nav className={styles.links}>
-          <Link href="/work"><Button>Work</Button></Link>
+          <Link href="/projects"><Button>Projects</Button></Link>
           <Link href="/resume"><Button>Resume</Button></Link>
         </nav>
       </div>
