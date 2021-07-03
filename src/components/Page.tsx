@@ -1,8 +1,7 @@
-import type { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
-import { MDXProvider } from '@mdx-js/react'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import cx from 'clsx'
 
-import { MDXFrontMatter } from '../lib/types'
 import Layout, { LayoutProps } from './Layout'
 import Anchor from './Anchor'
 
@@ -18,26 +17,20 @@ const useStyles = createUseStyles( {
 } )
 
 type PageProps = {
-  children:ReactNode,
-  frontMatter: MDXFrontMatter
-} & LayoutProps
+  source: MDXRemoteSerializeResult,
+} & Omit<LayoutProps, 'children'>
 
-const Page = ( { children, title, description, frontMatter, className, ...props }:PageProps ) => {
+const Page = ( { source, className, ...props }:PageProps ) => {
   const styles = useStyles()
 
   return (
-    <Layout
-      title={frontMatter?.title ?? title}
-      description={frontMatter?.description ?? description}
-      className={styles.main}
-      {...props}
-    >
-      <MDXProvider components={{
-        a: Anchor,
-      }}
-      >
-        {children}
-      </MDXProvider>
+    <Layout className={cx( styles.main, className )} {...props}>
+      <MDXRemote
+        {...source}
+        components={{
+          a: Anchor,
+        }}
+      />
     </Layout>
   )
 }
