@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
 
@@ -11,6 +12,7 @@ export default class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage
 
     ctx.renderPage = () => originalRenderPage( {
+      // eslint-disable-next-line react/display-name
       enhanceApp: App => props => (
         <JssProvider registry={registry} generateId={generateId}>
           <App {...props} />

@@ -2,8 +2,8 @@ import type { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react'
 import { createUseStyles } from 'react-jss'
 import cx from 'clsx'
 
-import Seo, { SeoProps } from '../components/Seo'
-import Footer from '../components/Footer'
+import Seo, { SeoProps } from './Seo'
+import Footer from './Footer'
 import Navbar from './Navbar'
 import { Breakpoints, widthLessThan } from '../theme'
 

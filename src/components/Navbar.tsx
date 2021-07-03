@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { createUseStyles } from 'react-jss'
 
 import { widthLessThan, Breakpoints, Colors } from '../theme'
-import Button from '../components/Button'
+import Button from './Button'
 import Link from './Anchor'
 
 const useStyles = createUseStyles( {
@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.main}>
-      <Image className={styles.img} src="/images/me.png" width={120} height={120} quality={100} priority layout="fixed" />
+      <Image alt="Saihaj Headshot" className={styles.img} src="/images/me.png" width={120} height={120} quality={100} priority layout="fixed" />
       <div className={styles.navWrapper}>
         <h1 className={styles.name}>
           <Link href="/">
