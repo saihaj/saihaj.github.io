@@ -20,7 +20,7 @@ export const getStaticProps:GetStaticProps = async () => {
   
   I am interested in web development, mobile development, serverless computing, developer tooling, distributed systems, and cloud infrastructure.
 
-  Co-founder and CTO at [Ambassadors Media](https://ambassadors.media). Ambassadors Media’s vision seeks to identify and capitalize on emerging trends; Market. Network. Productions.
+  Co-founder at [Ambassadors Media](https://ambassadors.media). Ambassadors Media’s vision seeks to identify and capitalize on emerging trends; Market. Network. Productions.
   Interlacing creativity and community with the Ambassador Vision, propels the sucess of both Ambassadors Media and our partners.
   
 
