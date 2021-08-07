@@ -1,38 +1,10 @@
 /* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
+import { getCssString } from '../theme'
 
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 export default class MyDocument extends Document {
-  static async getInitialProps( ctx:DocumentContext ) {
-    const registry = new SheetsRegistry()
-    const generateId = createGenerateId()
-
-    const originalRenderPage = ctx.renderPage
-
-    ctx.renderPage = () => originalRenderPage( {
-      // eslint-disable-next-line react/display-name
-      enhanceApp: App => props => (
-        <JssProvider registry={registry} generateId={generateId}>
-          <App {...props} />
-        </JssProvider>
-      ),
-    } )
-
-    const initialProps = await Document.getInitialProps( ctx )
-
-    return {
-      ...initialProps,
-      styles: (
-        <>
-          {initialProps.styles}
-          <style id="server-side-styles">{registry.toString()}</style>
-        </>
-      ),
-    }
-  }
-
   render() {
     return (
       <Html lang="en">
@@ -52,6 +24,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <style id="stiches" dangerouslySetInnerHTML={{ __html: getCssString() }} />
           <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
           <meta name="msapplication-TileColor" content="#000814" />

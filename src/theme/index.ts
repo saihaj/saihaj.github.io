@@ -1,3 +1,5 @@
+import { createCss } from '@stitches/react'
+
 export enum Colors {
   white = '#fff',
   darkBlue = '#000814',
@@ -16,50 +18,25 @@ export const widthMoreThan = ( width:number ) => `@media screen and (min-width: 
 
 export const widthLessThan = ( width:number ) => `@media screen and (max-width: ${width - 1}px)`
 
-export const globalStyles = {
-  '@global': {
-    '*': {
-      boxSizing: 'border-box',
-    },
-    html: {
-      fontFamily: 'Rubik',
-      fontSize: 14,
-    },
-    body: {
-      backgroundColor: Colors.darkBlue,
-      color: Colors.white,
-      fontSize: '1.5rem',
-    },
-    '#__next': {
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      margin: '0 auto',
-      maxWidth: '54rem',
-      [ widthLessThan( Breakpoints.tablet ) ]: {
-        padding: '0 0.6rem',
-      },
-    },
-    a: {
-      color: Colors.white,
-      padding: 0,
-      margin: 0,
-      textDecorationThickness: 1.5,
-      textDecorationStyle: 'dotted',
-      textUnderlineOffset: '0.15rem',
-      '&:hover': {
-        color: Colors.yellow,
-        '& svg > *': {
-          stroke: Colors.yellow,
-        },
-      },
-    },
-    ':focus': {
-      borderColor: Colors.red,
-    },
-    ':focus-visible': {
-      outline: `${Colors.white} solid 1px`,
-      borderColor: Colors.yellow,
+export const { styled, css, global, keyframes, getCssString, theme } = createCss( {
+  theme: {
+    colors: {
+      white: '#fff',
+      darkBlue: '#000814',
+      yellow: '#FFBA08',
+      red: '#E51010',
+      grey: '#E4E2E2',
     },
   },
-}
+  media: {
+    mobile: '(max-width: 480px)',
+    tablet: '(max-width: 768px)',
+    laptop: '(max-width: 1024px)',
+  },
+  utils: {
+    mx: () => value => ( { marginLeft: value, marginRight: value } ),
+    my: () => value => ( { marginTop: value, marginBottom: value } ),
+    px: () => value => ( { paddingLeft: value, paddingRight: value } ),
+    py: () => value => ( { paddingTop: value, paddingBottom: value } ),
+  },
+} )
