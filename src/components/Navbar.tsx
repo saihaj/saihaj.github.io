@@ -1,77 +1,73 @@
 import Image from 'next/image'
-import { createUseStyles } from 'react-jss'
 
-import { widthLessThan, Breakpoints, Colors } from '../theme'
+import { styled } from '../theme'
 import Button from './Button'
 import Link from './Anchor'
 
-const useStyles = createUseStyles( {
-  main: {
-    marginTop: '3rem',
-    display: 'flex',
-    marginBottom: '4rem',
-    [ widthLessThan( Breakpoints.tablet ) ]: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      marginBottom: 0,
-    },
-  },
-  name: {
-    margin: 0,
-    padding: 0,
-    fontFamily: 'Fugaz One',
-    fontSize: '2.2rem',
-    '& a': {
-      textDecoration: 'none',
-    },
-  },
-  links: {
-    marginTop: '0.5rem',
-    display: 'flex',
-    alignContent: 'center',
-    '& > button:not(:first-of-type)': {
-      marginLeft: '1.5rem',
-    },
-  },
-  img: {
-    borderRadius: '9999px',
-    borderColor: `${Colors.yellow} !important`,
-    borderWidth: '0.15rem !important',
-    borderStyle: 'solid !important',
-  },
-  navWrapper: {
-    display: 'flex',
+const Main = styled( 'div', {
+  marginTop: '3rem',
+  display: 'flex',
+  marginBottom: '4rem',
+  '@tablet': {
     flexDirection: 'column',
-    justifyContent: 'center',
-    marginLeft: '2rem',
-    [ widthLessThan( Breakpoints.tablet ) ]: {
-      marginLeft: 0,
-      marginTop: '0.5rem',
-      alignItems: 'center',
-      marginBottom: '3rem',
-    },
+    alignItems: 'center',
+    marginBottom: 0,
   },
-
 } )
 
-const Navbar = () => {
-  const styles = useStyles()
+const Img = styled( Image, {
+  borderRadius: '9999px',
+  borderColor: '$yellow !important',
+  borderWidth: '0.15rem !important',
+  borderStyle: 'solid !important',
+} )
 
-  return (
-    <div className={styles.main}>
-      <Image alt="Saihaj Headshot" className={styles.img} src="/images/me.png" width={120} height={120} quality={100} priority layout="fixed" />
-      <div className={styles.navWrapper}>
-        <h1 className={styles.name}>
-          <Link href="/">
-            Saihajpreet Singh
-          </Link>
-        </h1>
-        <nav className={styles.links}>
-          <Link href="/projects"><Button>Projects</Button></Link>
-        </nav>
-      </div>
-    </div>
-  )
-}
+const Name = styled( 'h1', {
+  margin: 0,
+  padding: 0,
+  fontFamily: 'Fugaz One',
+  fontSize: '2.2rem',
+  '& a': {
+    textDecoration: 'none',
+  },
+} )
+
+const NavWrapper = styled( 'div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  marginLeft: '2rem',
+  '@tablet': {
+    marginLeft: 0,
+    marginTop: '0.5rem',
+    alignItems: 'center',
+    marginBottom: '3rem',
+  },
+} )
+
+const Nav = styled( 'nav', {
+  marginTop: '0.5rem',
+  display: 'flex',
+  alignContent: 'center',
+  '& > button:not(:first-of-type)': {
+    marginLeft: '1.5rem',
+  },
+} )
+
+const Navbar = () => (
+  <Main>
+    <Img alt="Saihaj Headshot" src="/images/me.png" width={120} height={120} quality={100} priority layout="fixed" />
+    <NavWrapper>
+      <Name>
+        <Link href="/">
+          Saihajpreet Singh
+        </Link>
+      </Name>
+      <Nav>
+        <Link href="/projects"><Button>Projects</Button></Link>
+      </Nav>
+    </NavWrapper>
+  </Main>
+)
 
 export default Navbar
