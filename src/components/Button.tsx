@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import cx from 'clsx'
-import { StitchesComponentWithAutoCompleteForJSXElements } from '@stitches/react'
+import type * as Polymorphic from '@radix-ui/react-polymorphic'
+
 import { styled } from '../theme'
 
 const Btn = styled( 'button', {
@@ -21,7 +22,7 @@ const Btn = styled( 'button', {
 
 type ButtonProps = {
   children: ReactNode
-} & StitchesComponentWithAutoCompleteForJSXElements<'button'>
+} & Polymorphic.OwnProps<typeof Btn>
 
 const Button = ( { children, className, ...props }:ButtonProps ) => (
   <Btn type="button" className={cx( className )} {...props}>{children}</Btn>

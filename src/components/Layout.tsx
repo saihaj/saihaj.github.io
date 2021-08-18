@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { StitchesComponentWithAutoCompleteForJSXElements } from '@stitches/react'
+import type * as Polymorphic from '@radix-ui/react-polymorphic'
 
 import { styled } from '../theme'
 
@@ -16,7 +16,7 @@ const Main = styled( 'main', {
 
 export type LayoutProps = {
   children:ReactNode,
-} & StitchesComponentWithAutoCompleteForJSXElements<'main'> & SeoProps
+} & SeoProps & Polymorphic.OwnProps<typeof Main>
 
 const Page = ( { children, title, description, className, ...props }:LayoutProps ) => (
   <>
