@@ -1,4 +1,3 @@
-import { createUseStyles } from 'react-jss'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import cx from 'clsx'
 
