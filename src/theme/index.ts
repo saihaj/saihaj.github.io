@@ -1,23 +1,5 @@
 import { createCss } from '@stitches/react'
 
-export enum Colors {
-  white = '#fff',
-  darkBlue = '#000814',
-  yellow = '#FFBA08',
-  red = '#E51010',
-  grey = '#E4E2E2'
-}
-
-export enum Breakpoints {
-  mobile = 480,
-  tablet = 768,
-  laptop = 1024,
-}
-
-export const widthMoreThan = ( width:number ) => `@media screen and (min-width: ${width}px)`
-
-export const widthLessThan = ( width:number ) => `@media screen and (max-width: ${width - 1}px)`
-
 export const { styled, css, global, keyframes, getCssString, theme } = createCss( {
   theme: {
     colors: {
