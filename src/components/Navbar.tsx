@@ -65,6 +65,7 @@ const Navbar = () => (
       </Name>
       <Nav>
         <Link href="/projects"><Button>Projects</Button></Link>
+        <Link href="/resume"><Button>Resume</Button></Link>
       </Nav>
     </NavWrapper>
   </Main>

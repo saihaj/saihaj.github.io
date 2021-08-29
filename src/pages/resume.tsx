@@ -1,33 +1,32 @@
 import Layout from '../components/Layout'
-import SKILLS from '../content/Skills'
-import { styled } from '../theme'
+import { styled, css } from '../theme'
+import Program from '../components/resume/Program'
+import Experience from '../components/resume/Experience'
+import Certification from '../components/resume/Certifications'
+import Skills from '../components/resume/Skills'
+import EDUCATION from '../content/Education'
+import EXPERIENCE from '../content/Experience'
+import CERTIFICATIONS from '../content/Certifications'
 
-const SkillsUL = styled( 'ul', {
+const SectionTitle = styled( 'h2', {
   margin: 0,
-  padding: 0,
+  marginTop: '2rem',
 } )
 
-const SkillTitle = styled( 'h3', {
-  marginBottom: '0.5rem',
+const firstTitle = css( {
+  marginTop: '0 !important',
 } )
-
-const Skills = () => (
-  <>
-    <h2>Skills</h2>
-    {Object.keys( SKILLS ).map( skill => (
-      <div key={skill}>
-        <SkillTitle>{skill}</SkillTitle>
-        <SkillsUL>
-          {( SKILLS[ skill as keyof typeof SKILLS ] ).sort( ( a, b ) => a.localeCompare( b ) ).reduce( ( acc, item ) => `${acc}, ${item}` )}
-        </SkillsUL>
-      </div>
-    ) )}
-  </>
-)
 
 const Resume = () => (
   <Layout title="Resume">
+    <SectionTitle className={firstTitle()}>Education</SectionTitle>
+    {EDUCATION.map( props => <Program key={props.title} {...props} /> )}
+    <SectionTitle>Experience</SectionTitle>
+    {EXPERIENCE.map( props => <Experience key={props.company} {...props} /> )}
+    <SectionTitle>Skills</SectionTitle>
     <Skills />
+    <SectionTitle>Certifications</SectionTitle>
+    {CERTIFICATIONS.map( props => <Certification key={props.company} {...props} /> )}
   </Layout>
 )
 
