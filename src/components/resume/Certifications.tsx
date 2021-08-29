@@ -5,15 +5,23 @@ const Title = styled( 'div', {
   alignItems: 'center',
   justifyContent: 'space-between',
   marginTop: '1rem',
+  '@tablet': {
+    alignItems: 'baseline',
+    flexDirection: 'column',
+  },
   marginBottom: '0.3rem',
   '& h4, h5': {
     margin: 0,
     fontWeight: 800,
   },
+  '& h5': {
+    fontWeight: 'normal',
+  },
 } )
 
 const Credential = styled( 'h6', {
   margin: 0,
+  fontWeight: 'normal',
 } )
 
 type CertificationProps = {

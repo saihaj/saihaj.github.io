@@ -10,14 +10,23 @@ const Title = styled( 'div', {
     margin: 0,
     fontWeight: 800,
   },
+  '& h5': {
+    fontWeight: 'normal',
+  },
+  '@tablet': {
+    alignItems: 'baseline',
+    flexDirection: 'column',
+  },
 } )
 
 const Description = styled( 'h5', {
   margin: 0,
+  fontWeight: 'normal',
 } )
 
 const Location = styled( 'h6', {
   margin: 0,
+  fontWeight: 'normal',
 } )
 
 type ProgramProps = {

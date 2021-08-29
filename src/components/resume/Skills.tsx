@@ -3,6 +3,7 @@ import { styled } from '../../theme'
 
 const UL = styled( 'h5', {
   margin: 0,
+  fontWeight: 'normal',
 } )
 
 const Title = styled( 'h4', {
