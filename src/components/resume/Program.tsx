@@ -41,7 +41,7 @@ const Program = ( { title, startDate, endDate, description, location }:ProgramPr
   <>
     <Title>
       <h4>{title}</h4>
-      <h5>{startDate} - {endDate}</h5>
+      {endDate.length === 0 ? <h5>Since {startDate}</h5> : <h5>{startDate} - {endDate}</h5>}
     </Title>
     <Description>{description}</Description>
     <Location>{location}</Location>

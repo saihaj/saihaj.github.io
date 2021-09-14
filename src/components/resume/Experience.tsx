@@ -52,7 +52,7 @@ const Experience = (
   <>
     <Title>
       <h4>{company} | {role}</h4>
-      <h5>{startDate} - {endDate}</h5>
+      {endDate.length === 0 ? <h5>Since {startDate}</h5> : <h5>{startDate} - {endDate}</h5>}
     </Title>
     <Location>{location}</Location>
     <Description>{description}</Description>
