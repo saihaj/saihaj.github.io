@@ -14,7 +14,7 @@ const EXPERIENCE = [
     description: 'Bring together the best content creators and curate premier content across multiple platforms. Developed website and twitter bot for discord.',
     location: 'Ottawa, ON, Canada',
     startDate: 'March 2021',
-    endDate: '',
+    endDate: 'September 2021',
     stack: 'TypeScript, Docker, MySQL, Node.js, Gatsby.js, Next.js, TailwindCSS, ReactJSS, Ghost, Strapi, Vercel, Gatsby Cloud, Azure, GitHub Actions',
   },
   {
