@@ -2,10 +2,10 @@ import 'normalize.css'
 import { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { global } from '../theme'
+import { globalCss } from '../theme'
 import { pageview } from '../lib/gtag'
 
-const globalStyles = global( {
+const globalStyles = globalCss( {
   '*': {
     boxSizing: 'border-box',
   },
