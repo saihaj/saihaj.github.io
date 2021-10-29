@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { getCssString } from '../theme'
+import { getCssText } from '../theme'
 
 import { GA_TRACKING_ID } from '../lib/gtag'
 
@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <style id="stiches" dangerouslySetInnerHTML={{ __html: getCssString() }} />
+          <style id="stiches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
           <meta name="msapplication-TileColor" content="#000814" />

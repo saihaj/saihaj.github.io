@@ -1,6 +1,6 @@
-import { createCss } from '@stitches/react'
+import { createStitches } from '@stitches/react'
 
-export const { styled, css, global, keyframes, getCssString, theme } = createCss( {
+export const { styled, css, globalCss, keyframes, getCssText, theme } = createStitches( {
   theme: {
     colors: {
       white: '#fff',
@@ -16,9 +16,9 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
     laptop: '(max-width: 1024px)',
   },
   utils: {
-    mx: () => value => ( { marginLeft: value, marginRight: value } ),
-    my: () => value => ( { marginTop: value, marginBottom: value } ),
-    px: () => value => ( { paddingLeft: value, paddingRight: value } ),
-    py: () => value => ( { paddingTop: value, paddingBottom: value } ),
+    mx: ( value: number ) => ( { marginLeft: value, marginRight: value } ),
+    my: ( value: number ) => ( { marginTop: value, marginBottom: value } ),
+    px: ( value: number ) => ( { paddingLeft: value, paddingRight: value } ),
+    py: ( value: number ) => ( { paddingTop: value, paddingBottom: value } ),
   },
 } )
