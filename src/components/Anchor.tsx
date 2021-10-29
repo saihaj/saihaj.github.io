@@ -12,8 +12,8 @@ const Anchor = ( { href, children, ...props }: AnchorProps ) => (
       {children}
     </a>
   ) : (
-    <Link href={href} {...props}>
-      {children}
+    <Link href={href} {...props} passHref>
+      <a>{children}</a>
     </Link>
   )
 )
