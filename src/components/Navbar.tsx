@@ -49,7 +49,7 @@ const Nav = styled( 'nav', {
   marginTop: '0.5rem',
   display: 'flex',
   alignContent: 'center',
-  '& > button:not(:first-of-type)': {
+  '& > a:not(:first-of-type)': {
     marginLeft: '1.5rem',
   },
 } )
