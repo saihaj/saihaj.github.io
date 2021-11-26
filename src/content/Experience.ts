@@ -1,5 +1,23 @@
 const EXPERIENCE = [
   {
+    company: 'Sound.xyz',
+    role: 'Engineer',
+    description: 'Building web3 tools for artists.',
+    location: 'Metaverse',
+    startDate: 'November 2021',
+    endDate: '',
+    stack: 'TypeScript, JavaScript, GraphQL, Next.js, GitHub Actions, Vercel',
+  },
+  {
+    company: 'The Guild',
+    role: 'Open Source Developer',
+    description: 'Large Scale Open Source done right.',
+    location: 'Everywhere',
+    startDate: 'September 2021',
+    endDate: '',
+    stack: 'TypeScript, JavaScript, GraphQL, Azure, Kubernetes, Next.js, GitHub Actions, Vercel',
+  },
+  {
     company: 'Giatec Scientific',
     role: 'Software Developer',
     description: 'Revolutionizing the concrete industry.',
