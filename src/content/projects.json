@@ -1,6 +1,26 @@
 {
   "values": [
     {
+      "name": "GraphQL/graphql-js",
+      "role": "Contributor",
+      "github": "https://github.com/graphql/graphql-js"
+    },
+    {
+      "name": "dotansimha/envelop",
+      "role": "Contributor",
+      "github": "https://github.com/dotansimha/envelop"
+    },
+    {
+      "name": "dotansimha/graphql-yoga",
+      "role": "Maintainer",
+      "github": "https://github.com/dotansimha/graphql-yoga"
+    },
+    {
+      "name": "contra/graphql-helix",
+      "role": "Contributor",
+      "github": "https://github.com/contra/graphql-helix"
+    },
+    {
       "name": "ShabadOS/theme-tool",
       "role": "Author",
       "github": "https://github.com/shabados/theme-tool"
@@ -11,14 +31,14 @@
       "github": "https://github.com/shabados/docs"
     },
     {
-      "name": "GraphQL/graphql-js",
-      "role": "Contributor",
-      "github": "https://github.com/graphql/graphql-js"
-    },
-    {
       "name": "Senior Dialer App",
       "role": "Author",
       "github": "https://github.com/saihaj/SeniorDialerApp"
+    },
+    {
+      "name": "Basic Beasts",
+      "role": "Contributor",
+      "github": "https://github.com/basicbeasts/basic-beasts"
     },
     {
       "name": "ShabadOS/mobile",
