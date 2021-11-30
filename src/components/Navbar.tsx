@@ -56,7 +56,7 @@ const Nav = styled( 'nav', {
 
 const Navbar = () => (
   <Main>
-    <Img alt="Saihaj Headshot" src="/images/me.png" width={120} height={120} quality={100} priority layout="fixed" />
+    <Img alt="Saihaj Headshot" src="/images/me.png" width={160} height={160} quality={100} priority layout="fixed" />
     <NavWrapper>
       <Name>
         <Link href="/">
