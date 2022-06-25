@@ -14,17 +14,20 @@ const Home = ( { content }:HomeProps ) => <Page source={content} />
 export const getStaticProps:GetStaticProps = async () => {
   const source = `
   Greetings!
-  
-  I am Full stack Engineer pursuing computer science with honors in Internet Security at [Carleton University](https://carleton.ca).
+
+  I am Fullstack Engineer pursuing computer science at [Carleton University](https://carleton.ca).
 
   I am interested in web development, mobile development, serverless computing, developer tooling, distributed systems, decentralized systems, and cloud infrastructure.
 
-  I help maintain many open source projects notably [\`graphql-js\`](https://github.com/graphql/graphql-js), tooling from [@TheGuildDev](https://twitter.com/TheGuildDev) and [@shabad_os](https://twitter.com/shabad_os).
+  I help maintain many open source projects notably [\`graphql-js\`](https://github.com/graphql/graphql-js), tooling from [@TheGuildDev](https://twitter.com/TheGuildDev), [@shabad_os](https://twitter.com/shabad_os) and [\`graphiql\`](https://github.com/graphql/graphiql#active).
 
-  Engineer at [@soundxyz_](https://twitter.com/soundxyz_) building web3 tools for artists.
-  Leading automation and development efforts [@ScribeDAO](https://twitter.com/ScribeDAO).
+  I work on many things!
 
-  Co-founded [Ambassadors Media](https://ambassadors.media) and lead technical development.
+  [@TheGuildDev](https://twitter.com/TheGuildDev) working on open source tooling for API infrastructure.
+
+  [@soundxyz_](https://twitter.com/soundxyz_) building web3 tools for artists and their communities.
+
+  [@TheGraph](https://twitter.com/graphprotocol) working on [@Geo](https://twitter.com/geobrowser)
 `
 
   const mdxSource = await serialize( source )
