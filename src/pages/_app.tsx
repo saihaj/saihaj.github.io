@@ -46,8 +46,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={LayoutContainer}>
         <Nav />
         <Component {...pageProps} />
-        <footer className={Footer}>Saihajpreet Singh</footer>
       </main>
+      <footer className={Footer}>Saihajpreet Singh</footer>
       <Analytics />
     </>
   )

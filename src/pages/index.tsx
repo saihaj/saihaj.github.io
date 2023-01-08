@@ -1,8 +1,8 @@
-import { isMacOs } from 'react-device-detect'
-
 import Link from 'next/link'
+import { isMacOs } from 'react-device-detect'
 import { LayoutContainer, LinkStyle, Paragraph } from '../styles/home.css'
 import { Seo } from '../components/Seo'
+import { useEffect, useState } from 'react'
 
 const BioLink = ({
   href,
@@ -22,6 +22,17 @@ const BioLink = ({
 )
 
 export default function Home() {
+  const [deviceOpener, setDeviceOpener] = useState<'imessage://' | 'mailto:'>(
+    'mailto:',
+  )
+
+  // This ensure that on client side we set the correct opener
+  useEffect(() => {
+    if (isMacOs) {
+      setDeviceOpener('imessage://')
+    }
+  }, [])
+
   return (
     <>
       <Seo />
@@ -41,9 +52,7 @@ export default function Home() {
         <p className={Paragraph}>
           Get in touch on{' '}
           <BioLink href="https://twitter.com/singh_saihaj">Twitter</BioLink> or{' '}
-          <BioLink
-            href={`${isMacOs ? 'imessage://' : 'mailto:'}chat@saihaj.dev`}
-          >
+          <BioLink href={`${deviceOpener}chat@saihaj.dev`}>
             chat@saihaj.dev
           </BioLink>
         </p>
