@@ -7,6 +7,7 @@ import { Footer, LayoutContainer } from '../styles/global.css'
 import { Nav } from '../components/Nav'
 import { useEffect } from 'react'
 import { pageview } from '../lib/gtag'
+import { Analytics } from '@vercel/analytics/react'
 
 const mavenPro = Maven_Pro({
   style: ['normal'],
@@ -47,6 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <footer className={Footer}>Saihajpreet Singh</footer>
       </main>
+      <Analytics />
     </>
   )
 }
