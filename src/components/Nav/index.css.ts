@@ -3,11 +3,16 @@ import { THEME_VARS } from '../../styles/global.css'
 
 export const NavWrapper = style({
   display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'flex-end',
+  flexDirection: 'row-reverse',
+  justifyContent: 'flex-start',
   gap: 14,
-  marginTop: 20,
-  marginBottom: 40,
+  paddingTop: 20,
+  paddingBottom: 40,
+  position: 'sticky',
+  top: 0,
+  left: 0,
+  right: 0,
+  backgroundColor: THEME_VARS.color.backgroundBlue,
 })
 
 const navItemBase = style({
@@ -29,8 +34,10 @@ export const NavItem = styleVariants({
       borderColor: THEME_VARS.color.fadedWhite,
       borderWidth: 1,
       borderStyle: 'solid',
+      padding: '1px 5px',
       ':hover': {
         color: THEME_VARS.color.white,
+        borderColor: THEME_VARS.color.white,
       },
     },
   ],

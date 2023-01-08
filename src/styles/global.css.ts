@@ -18,12 +18,14 @@ export const LayoutContainer = style({
   maxWidth: THEME_VARS.maxWidth,
   padding: '0 16px',
   margin: '0 auto',
+  minHeight: 'calc(100vh - 40px - 20px)',
 })
 
 export const Footer = style({
   paddingBottom: 12,
   paddingTop: 12,
-  position: 'absolute',
+  position: 'sticky',
+  backgroundColor: THEME_VARS.color.backgroundBlue,
   bottom: 0,
   left: 0,
   right: 0,
