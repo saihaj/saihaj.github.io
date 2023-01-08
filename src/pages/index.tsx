@@ -43,10 +43,10 @@ export default function Home() {
         </p>
         <p className={Paragraph}>
           I help maintain many open source projects at{' '}
-          <BioLink href="https://github.com/graphql">GraphQL</BioLink>,{' '}
+          <BioLink href="https://sound.xyz">Sound</BioLink>,{' '}
           <BioLink href="https://the-guild.dev">The Guild</BioLink>,{' '}
           <BioLink href="https://thegraph.com">TheGraph</BioLink>,{' '}
-          <BioLink href="https://sound.xyz">Sound</BioLink> and{' '}
+          <BioLink href="https://github.com/graphql">GraphQL</BioLink> and{' '}
           <BioLink href="https://shabados.com">ShabadOS</BioLink>.
         </p>
         <p className={Paragraph}>
