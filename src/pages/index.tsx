@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { isMacOs } from 'react-device-detect'
+import { isMacOs, isIOS } from 'react-device-detect'
 import { LayoutContainer, LinkStyle, Paragraph } from '../styles/home.css'
 import { Seo } from '../components/Seo'
 import { useEffect, useState } from 'react'
@@ -28,7 +28,7 @@ export default function Home() {
 
   // This ensure that on client side we set the correct opener
   useEffect(() => {
-    if (isMacOs) {
+    if (isMacOs || isIOS) {
       setDeviceOpener('imessage://')
     }
   }, [])
