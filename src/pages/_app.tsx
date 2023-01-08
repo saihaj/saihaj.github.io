@@ -1,70 +1,52 @@
 import 'normalize.css'
+import '../styles/global.css'
+import Router from 'next/router'
+import { Maven_Pro, Work_Sans } from '@next/font/google'
+import type { AppProps } from 'next/app'
+import { Footer, LayoutContainer } from '../styles/global.css'
+import { Nav } from '../components/Nav'
 import { useEffect } from 'react'
-import { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import { globalCss } from '../theme'
 import { pageview } from '../lib/gtag'
 
-const globalStyles = globalCss( {
-  '*': {
-    boxSizing: 'border-box',
-  },
-  html: {
-    fontFamily: 'Rubik',
-    fontSize: 14,
-  },
-  body: {
-    backgroundColor: '$darkBlue',
-    color: '$white',
-    fontSize: '1.5rem',
-  },
-  '#__next': {
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    margin: '0 auto',
-    maxWidth: '54rem',
-    '@tablet': {
-      padding: '0 0.6rem',
-    },
-  },
-  a: {
-    color: '$white',
-    padding: 0,
-    margin: 0,
-    textDecorationThickness: '1.5',
-    textDecorationStyle: 'dotted',
-    textUnderlineOffset: '0.15rem',
-    '&:hover': {
-      color: '$white',
-      '& svg > *': {
-        stroke: '$yellow',
-      },
-    },
-  },
-  ':focus': {
-    borderColor: '$red',
-  },
-  ':focus-visible': {
-    outline: '$white solid 1px',
-    borderColor: '$yellow',
-  },
-} )
+const mavenPro = Maven_Pro({
+  style: ['normal'],
+  weight: ['400'],
+  variable: '--maven-pro',
+})
 
-const App = ( { Component, pageProps }: AppProps ) => {
-  const router = useRouter()
-  globalStyles()
+const workSans = Work_Sans({
+  style: ['normal'],
+  weight: ['600'],
+  variable: '--work-sans',
+})
 
+export default function App({ Component, pageProps }: AppProps) {
   // Analytics
-  useEffect( () => {
-    router.events.on( 'routeChangeComplete', pageview )
+  useEffect(() => {
+    Router.events.on('routeChangeComplete', pageview)
 
     return () => {
-      router.events.off( 'routeChangeComplete', pageview )
+      Router.events.off('routeChangeComplete', pageview)
     }
-  }, [ router.events ] )
-
-  return <Component {...pageProps} />
+  }, [Router.events])
+  return (
+    <>
+      <style jsx global>{`
+        :root {
+          --maven-pro: ${mavenPro.style.fontFamily};
+          --work-sans: ${workSans.style.fontFamily};
+        }
+        html {
+          font-family: ${mavenPro.style.fontFamily};
+          font-size: 14px;
+          font-weight: ${mavenPro.style.fontWeight};
+        }
+      `}</style>
+      <main className={LayoutContainer}>
+        <Nav />
+        <Component {...pageProps} />
+        <footer className={Footer}>Saihajpreet Singh</footer>
+      </main>
+    </>
+  )
 }
-
-export default App

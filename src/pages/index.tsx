@@ -1,38 +1,53 @@
+import { isMacOs } from 'react-device-detect'
 
-import { serialize } from 'next-mdx-remote/serialize'
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import type { GetStaticProps } from 'next'
+import Link from 'next/link'
+import { LayoutContainer, LinkStyle, Paragraph } from '../styles/home.css'
+import { Seo } from '../components/Seo'
 
-import Page from '../components/Page'
+const BioLink = ({
+  href,
+  children,
+}: {
+  href: string
+  children: React.ReactNode
+}) => (
+  <Link
+    href={href}
+    className={LinkStyle}
+    target="_blank"
+    referrerPolicy="no-referrer"
+  >
+    {children}
+  </Link>
+)
 
-type HomeProps = {
-  content: MDXRemoteSerializeResult
+export default function Home() {
+  return (
+    <>
+      <Seo />
+      <div className={LayoutContainer}>
+        <p className={Paragraph}>
+          I am an engineer interested in developer, infrastructure tooling and
+          application development.
+        </p>
+        <p className={Paragraph}>
+          I help maintain many open source projects at{' '}
+          <BioLink href="https://github.com/graphql">GraphQL</BioLink>,{' '}
+          <BioLink href="https://the-guild.dev">The Guild</BioLink>,{' '}
+          <BioLink href="https://thegraph.com">TheGraph</BioLink>,{' '}
+          <BioLink href="https://sound.xyz">Sound</BioLink> and{' '}
+          <BioLink href="https://shabados.com">ShabadOS</BioLink>.
+        </p>
+        <p className={Paragraph}>
+          Get in touch on{' '}
+          <BioLink href="https://twitter.com/singh_saihaj">Twitter</BioLink> or{' '}
+          <BioLink
+            href={`${isMacOs ? 'imessage://' : 'mailto:'}chat@saihaj.dev`}
+          >
+            chat@saihaj.dev
+          </BioLink>
+        </p>
+      </div>
+    </>
+  )
 }
-
-const Home = ( { content }:HomeProps ) => <Page source={content} />
-
-export const getStaticProps:GetStaticProps = async () => {
-  const source = `
-  Greetings!
-
-  I am Fullstack Engineer pursuing computer science at [Carleton University](https://carleton.ca).
-
-  I am interested in web development, mobile development, serverless computing, developer tooling, distributed systems, decentralized systems, and cloud infrastructure.
-
-  I help maintain many open source projects notably [\`graphql-js\`](https://github.com/graphql/graphql-js), tooling from [@TheGuildDev](https://twitter.com/TheGuildDev), [@shabad_os](https://twitter.com/shabad_os) and [\`graphiql\`](https://github.com/graphql/graphiql#active).
-
-  I work on many things!
-
-  [@TheGuildDev](https://twitter.com/TheGuildDev) working on open source tooling for API infrastructure.
-
-  [@soundxyz_](https://twitter.com/soundxyz_) building web3 tools for artists and their communities.
-
-  [@TheGraph](https://twitter.com/graphprotocol) working on [@Geo](https://twitter.com/geobrowser)
-`
-
-  const mdxSource = await serialize( source )
-
-  return { props: { content: mdxSource } }
-}
-
-export default Home

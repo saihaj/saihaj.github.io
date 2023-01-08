@@ -1,5 +1,2 @@
-node_modules/
-public/
-**/*.ts
-**/*.tsx
-.next/
+node_modules/**
+.next/**
