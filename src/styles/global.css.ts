@@ -5,6 +5,7 @@ export const THEME_VARS = createGlobalTheme(':root', {
     backgroundBlue: '#000814',
     white: '#fff',
     fadedWhite: '#CDCDCD',
+    fadedGrey: '#cdcdb380',
   },
   maxWidth: '800px',
 })
@@ -33,7 +34,7 @@ export const Footer = style({
   width: '100%',
   maxWidth: THEME_VARS.maxWidth,
   textAlign: 'center',
-  borderTopColor: THEME_VARS.color.fadedWhite,
+  borderTopColor: THEME_VARS.color.fadedGrey,
   borderTopWidth: 1,
   borderTopStyle: 'solid',
   color: THEME_VARS.color.fadedWhite,

@@ -13,6 +13,7 @@ export const NavWrapper = style({
   left: 0,
   right: 0,
   backgroundColor: THEME_VARS.color.backgroundBlue,
+  maskImage: `linear-gradient(${THEME_VARS.color.backgroundBlue}, 85%,transparent)`,
 })
 
 const navItemBase = style({

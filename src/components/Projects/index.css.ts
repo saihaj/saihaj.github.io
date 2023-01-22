@@ -23,7 +23,7 @@ export const ProjectItem = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  borderBottom: `0.5px solid ${THEME_VARS.color.fadedWhite}`,
+  borderBottom: `0.5px solid ${THEME_VARS.color.fadedGrey}`,
   padding: '8px 0',
   ':hover': {
     opacity: 0.8,
