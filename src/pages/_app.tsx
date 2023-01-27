@@ -43,8 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
           font-weight: ${mavenPro.style.fontWeight};
         }
       `}</style>
+      <Nav />
       <main className={LayoutContainer}>
-        <Nav />
         <Component {...pageProps} />
       </main>
       <footer className={Footer}>Saihajpreet Singh</footer>

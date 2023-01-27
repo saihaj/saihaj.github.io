@@ -2,10 +2,14 @@ import { style, styleVariants } from '@vanilla-extract/css'
 import { THEME_VARS } from '../../styles/global.css'
 
 export const NavWrapper = style({
+  maxWidth: THEME_VARS.maxWidth,
+  margin: '0 auto',
   display: 'flex',
   flexDirection: 'row-reverse',
   justifyContent: 'flex-start',
   gap: 14,
+  paddingLeft: 16,
+  paddingRight: 16,
   paddingTop: 20,
   paddingBottom: 40,
   position: 'sticky',
