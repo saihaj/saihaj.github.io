@@ -19,7 +19,8 @@ export const LayoutContainer = style({
   maxWidth: THEME_VARS.maxWidth,
   padding: '0 16px',
   margin: '0 auto',
-  minHeight: 'calc(100vh - 40px - 20px - 12px - 12px)',
+  // Full view port - height of nav area - height of footer area
+  minHeight: 'calc(100vh - 80px - 36.5px)',
 })
 
 export const Footer = style({
