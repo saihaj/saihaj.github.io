@@ -1,7 +1,7 @@
 import 'normalize.css'
 import '../styles/global.css'
 import Router from 'next/router'
-import { Maven_Pro, Work_Sans } from '@next/font/google'
+import { Maven_Pro, Work_Sans } from 'next/font/google'
 import type { AppProps } from 'next/app'
 import { Footer, LayoutContainer } from '../styles/global.css'
 import { Nav } from '../components/Nav'
@@ -13,12 +13,14 @@ const mavenPro = Maven_Pro({
   style: ['normal'],
   weight: ['400'],
   variable: '--maven-pro',
+  subsets: ['latin'],
 })
 
 const workSans = Work_Sans({
   style: ['normal'],
   weight: ['600'],
   variable: '--work-sans',
+  subsets: ['latin'],
 })
 
 export default function App({ Component, pageProps }: AppProps) {
