@@ -4,11 +4,7 @@ const withVanillaExtract = createVanillaExtractPlugin()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['normal'] } },
-    ],
-  },
+  optimizeFonts: true,
 }
 
 module.exports = withVanillaExtract(nextConfig)
