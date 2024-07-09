@@ -8,6 +8,7 @@ import { Nav } from '../components/Nav'
 import { useEffect } from 'react'
 import { pageview } from '../lib/gtag'
 import { Analytics } from '@vercel/analytics/react'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const mavenPro = Maven_Pro({
   style: ['normal'],
@@ -51,6 +52,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </main>
       <footer className={Footer}>Saihajpreet Singh</footer>
       <Analytics />
+      <GoogleTagManager gtmId="GTM-TQ7SXD6V" />
     </>
   )
 }
