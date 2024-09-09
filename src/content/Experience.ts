@@ -1,7 +1,25 @@
 const EXPERIENCE = [
   {
+    company: 'The Guild',
+    role: 'Software Engineering Lead',
+    description: 'Large Scale Open Source done right.',
+    location: 'Everywhere',
+    startDate: 'September 2021',
+    endDate: '',
+    stack: 'TypeScript, JavaScript, GraphQL, Azure, Kubernetes',
+  },
+  {
+    company: 'Anyscale',
+    role: 'Growth Engineer',
+    description: '',
+    location: 'Remote',
+    startDate: 'May 2024',
+    endDate: '',
+    stack: 'Python, Ray, TypeScript, JavaScript, React',
+  },
+  {
     company: 'Sound.xyz',
-    role: 'Engineer',
+    role: 'Founding Engineer',
     description: 'Building web3 tools for artists.',
     location: 'Metaverse',
     startDate: 'November 2021',
@@ -9,14 +27,13 @@ const EXPERIENCE = [
     stack: 'TypeScript, JavaScript, GraphQL, Next.js, GitHub Actions, Vercel',
   },
   {
-    company: 'The Guild',
-    role: 'Open Source Developer',
-    description: 'Large Scale Open Source done right.',
-    location: 'Everywhere',
+    company: 'Carleton University',
+    role: 'Teaching Assistant',
+    description: 'Introduction to functional and logic programming. ',
+    location: 'Ottawa, ON, Canada',
     startDate: 'September 2021',
-    endDate: '',
-    stack:
-      'TypeScript, JavaScript, GraphQL, Azure, Kubernetes, Next.js, GitHub Actions, Vercel',
+    endDate: 'December 2021',
+    stack: 'Racket, Prolog',
   },
   {
     company: 'Giatec Scientific',
@@ -24,7 +41,7 @@ const EXPERIENCE = [
     description: 'Revolutionizing the concrete industry.',
     location: 'Ottawa, ON, Canada',
     startDate: 'May 2021',
-    endDate: '',
+    endDate: 'December 2021',
     stack:
       'C#, Swift, TypeScript, Python, Azure, Kubernetes, Django, Flask, Angular, Xamarin, Bitrise, GitLabCI',
   },
