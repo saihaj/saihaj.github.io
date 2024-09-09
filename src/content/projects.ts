@@ -18,15 +18,9 @@ export const MAINTAINER = [
     href: 'https://github.com/dotansimha/graphql-yoga',
   },
   {
-    name: 'graph-cli',
-    description: 'The Graph data source runtime for mappings written in WASM',
-    href: 'https://github.com/graphprotocol/graph-cli',
-  },
-  {
-    name: 'graph-node',
-    description:
-      'Indexes data from blockchains such as Ethereum and serves it over GraphQL',
-    href: 'https://github.com/graphprotocol/graph-node',
+    name: 'graph-tooling',
+    description: 'Tooling for the Subgraph Developers',
+    href: 'https://github.com/graphprotocol/graph-tooling',
   },
   {
     name: 'envelop',
@@ -35,14 +29,9 @@ export const MAINTAINER = [
     href: 'https://github.com/dotansimha/envelop',
   },
   {
-    name: 'Sound SDK',
-    description: 'Making it easy to interact with the Sound Protocol',
-    href: 'https://github.com/soundxyz/sdk/tree/main/packages/sdk',
-  },
-  {
-    name: 'Sound Subgraph',
-    description: 'Indexing the Sound Protocol on the Graph.',
-    href: 'https://github.com/soundxyz/sdk/tree/main/packages/subgraph',
+    name: 'graphql-js',
+    description: 'A reference implementation of GraphQL for JavaScript',
+    href: 'https://github.com/graphql/graphql-js',
   },
   {
     name: 'graphql-tools-rs',
@@ -53,6 +42,17 @@ export const MAINTAINER = [
 ] satisfies Project[]
 
 export const INACTIVE = [
+  {
+    name: 'graph-node',
+    description:
+      'Indexes data from blockchains such as Ethereum and serves it over GraphQL',
+    href: 'https://github.com/graphprotocol/graph-node',
+  },
+  {
+    name: 'Sound Subgraph',
+    description: 'Indexing the Sound Protocol on the Graph.',
+    href: 'https://github.com/soundxyz/sdk/tree/main/packages/subgraph',
+  },
   {
     name: 'ShabadOS/theme-tool',
     description: 'Web app that generates Overlays for Shabad OS Presenter',
@@ -104,9 +104,15 @@ export const INACTIVE = [
 
 export const NOT_SO_ACTIVE_MAINTAINER = [
   {
-    name: 'graphql-js',
-    description: 'A reference implementation of GraphQL for JavaScript',
-    href: 'https://github.com/graphql/graphql-js',
+    name: 'graph-client',
+    description:
+      'The Graph library for building GraphQL-based dapps in a decentralized way.',
+    href: 'https://github.com/graphprotocol/graph-client',
+  },
+  {
+    name: 'Sound SDK',
+    description: 'Making it easy to interact with the Sound Protocol',
+    href: 'https://github.com/soundxyz/sdk/tree/main/packages/sdk',
   },
   {
     name: 'graphiql',
@@ -138,6 +144,16 @@ export const NOT_SO_ACTIVE_MAINTAINER = [
 ] satisfies Project[]
 
 export const EXPLORATIONS = [
+  {
+    name: 'FrameScout',
+    description: 'Discover and create trending frames',
+    href: 'https://github.com/saihaj/frameworks-2024',
+  },
+  {
+    name: 'the-subgraph-cacher',
+    description: 'Caching subgraphs on edge',
+    href: 'https://github.com/saihaj/the-subgraph-cacher',
+  },
   {
     name: 'lox',
     description:
