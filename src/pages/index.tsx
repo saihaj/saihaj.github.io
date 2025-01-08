@@ -48,8 +48,9 @@ export default function Home() {
       <Seo />
       <div className={LayoutContainer}>
         <p className={Paragraph}>
-          I am an engineer passionate about developer tools, infrastructure, and
-          application development.
+          I'm an engineer dedicated to building developer tools, infrastructure,
+          and application solutions. Experimenting with practical AI
+          applications. Constantly seeking ways to drive efficiency and progress.
         </p>
         <p className={Paragraph}>
           I actively contribute to and help maintain several open-source
@@ -71,8 +72,8 @@ export default function Home() {
           Engineering.
         </p>
         <p className={Paragraph}>
-          Get in touch on{' '}
-          <BioLink href="https://x.com/singh_saihaj">X</BioLink> or{' '}
+          Get in touch on <BioLink href="https://x.com/singh_saihaj">X</BioLink>{' '}
+          or{' '}
           <BioLink href={`${deviceOpener}chat@saihaj.dev`}>
             chat@saihaj.dev
           </BioLink>
