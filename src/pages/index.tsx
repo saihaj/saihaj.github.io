@@ -10,16 +10,26 @@ const BioLink = ({
 }: {
   href: string
   children: React.ReactNode
-}) => (
-  <Link
-    href={href}
-    className={LinkStyle}
-    target="_blank"
-    referrerPolicy="no-referrer"
-  >
-    {children}
-  </Link>
-)
+}) => {
+  const url = new URL(href)
+  if (url.protocol.startsWith('http')) {
+    url.searchParams.set('utm_source', 'saihaj.dev')
+    url.searchParams.set('utm_medium', 'bio')
+    url.searchParams.set('utm_campaign', 'bio-link')
+  }
+  const link = url.toString()
+
+  return (
+    <Link
+      href={link}
+      className={LinkStyle}
+      target="_blank"
+      referrerPolicy="no-referrer"
+    >
+      {children}
+    </Link>
+  )
+}
 
 export default function Home() {
   const [deviceOpener, setDeviceOpener] = useState<'imessage://' | 'mailto:'>(
@@ -38,20 +48,31 @@ export default function Home() {
       <Seo />
       <div className={LayoutContainer}>
         <p className={Paragraph}>
-          I am an engineer interested in developer, infrastructure tooling and
+          I am an engineer passionate about developer tools, infrastructure, and
           application development.
         </p>
         <p className={Paragraph}>
-          I help maintain many open source projects at{' '}
-          <BioLink href="https://sound.xyz">Sound</BioLink>,{' '}
+          I actively contribute to and help maintain several open-source
+          projects, including those under{' '}
           <BioLink href="https://the-guild.dev">The Guild</BioLink>,{' '}
-          <BioLink href="https://thegraph.com">TheGraph</BioLink>,{' '}
-          <BioLink href="https://github.com/graphql">GraphQL</BioLink> and{' '}
-          <BioLink href="https://shabados.com">ShabadOS</BioLink>.
+          <BioLink href="https://github.com/graphql">GraphQL</BioLink>,{' '}
+          <BioLink href="https://shabados.com">ShabadOS</BioLink>, and{' '}
+          <BioLink href="https://sound.xyz">Sound</BioLink>. Previously, I was a
+          maintaining tooling at{' '}
+          <BioLink href="https://thegraph.com">The Graph</BioLink>. Check out my{' '}
+          <BioLink href="https://github.com/saihaj">Github</BioLink> for more.
+        </p>
+        <p className={Paragraph}>
+          Beyond open source, I manage{' '}
+          <BioLink href="https://stellate.co">Stellate</BioLink>, the GraphQL
+          edge platform by{' '}
+          <BioLink href="https://the-guild.dev">The Guild</BioLink>, and support{' '}
+          <BioLink href="https://anyscale.com">Anyscale</BioLink> with Growth
+          Engineering.
         </p>
         <p className={Paragraph}>
           Get in touch on{' '}
-          <BioLink href="https://twitter.com/singh_saihaj">Twitter</BioLink> or{' '}
+          <BioLink href="https://x.com/singh_saihaj">X</BioLink> or{' '}
           <BioLink href={`${deviceOpener}chat@saihaj.dev`}>
             chat@saihaj.dev
           </BioLink>
