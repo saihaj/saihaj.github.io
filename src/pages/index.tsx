@@ -48,9 +48,9 @@ export default function Home() {
       <Seo />
       <div className={LayoutContainer}>
         <p className={Paragraph}>
-          I'm an engineer dedicated to building developer tools, infrastructure,
-          and application solutions. Experimenting with practical AI
-          applications. Constantly seeking ways to drive efficiency and progress.
+          I'm an engineer focused on building developer tools, infrastructure,
+          and application solutions, while experimenting with practical AI
+          applications. Always accelerating efficiently.
         </p>
         <p className={Paragraph}>
           I actively contribute to and help maintain several open-source
