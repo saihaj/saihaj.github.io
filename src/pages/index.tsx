@@ -72,7 +72,7 @@ export default function Home() {
           Engineering.
         </p>
         <p className={Paragraph}>
-          Get in touch on <BioLink href="https://x.com/singh_saihaj">X</BioLink>{' '}
+          Get in touch on <BioLink href="https://x.com/singh_saihaj">𝕏</BioLink>{' '}
           or{' '}
           <BioLink href={`${deviceOpener}chat@saihaj.dev`}>
             chat@saihaj.dev
