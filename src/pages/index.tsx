@@ -48,9 +48,12 @@ export default function Home() {
       <Seo />
       <div className={LayoutContainer}>
         <p className={Paragraph}>
-          I'm an engineer focused on building developer tools, infrastructure,
-          and application solutions, while experimenting with practical AI
-          applications. Always accelerating efficiently.
+          Building <BioLink href="https://rhetor.ai">Rhetor</BioLink> - the
+          infrastructure for autonomous public messaging that delivers
+          autonomous, evidence-based communication to build credibility, educate
+          audiences, and drive engagement at scale. Previously built consumer
+          apps, developer tooling, and infrastructure. Always accelerating
+          efficiently.
         </p>
         <p className={Paragraph}>
           I actively contribute to and help maintain several open-source
@@ -68,8 +71,7 @@ export default function Home() {
           <BioLink href="https://stellate.co">Stellate</BioLink>, the GraphQL
           edge platform by{' '}
           <BioLink href="https://the-guild.dev">The Guild</BioLink>, and support{' '}
-          <BioLink href="https://anyscale.com">Anyscale</BioLink> with Growth
-          Engineering.
+          <BioLink href="https://anyscale.com">Anyscale</BioLink> with Growth.
         </p>
         <p className={Paragraph}>
           Get in touch on <BioLink href="https://x.com/singh_saihaj">𝕏</BioLink>{' '}
