@@ -74,7 +74,7 @@ export default function Home() {
           <BioLink href="https://anyscale.com">Anyscale</BioLink> with Growth.
         </p>
         <p className={Paragraph}>
-          Get in touch on <BioLink href="https://x.com/singh_saihaj">𝕏</BioLink>{' '}
+          Get in touch on <BioLink href="https://x.com/saihaj">𝕏</BioLink>{' '}
           or{' '}
           <BioLink href={`${deviceOpener}chat@saihaj.dev`}>
             chat@saihaj.dev
