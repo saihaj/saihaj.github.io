@@ -48,34 +48,40 @@ export default function Home() {
       <Seo />
       <div className={LayoutContainer}>
         <p className={Paragraph}>
-          Building <BioLink href="https://rhetor.ai">Rhetor</BioLink> - the
-          infrastructure for autonomous public messaging that delivers
-          autonomous, evidence-based communication to build credibility, educate
-          audiences, and drive engagement at scale. Previously built consumer
-          apps, developer tooling, and infrastructure. Always accelerating
-          efficiently.
+          Every era of the internet has had its winners. Websites decided who
+          got found. Then search rankings. Then social. Now it's AI: when a
+          customer asks ChatGPT for a recommendation, only a few names come up,
+          and there's no page two.
         </p>
         <p className={Paragraph}>
-          I actively contribute to and help maintain several open-source
-          projects, including those under{' '}
-          <BioLink href="https://the-guild.dev">The Guild</BioLink>,{' '}
-          <BioLink href="https://github.com/graphql">GraphQL</BioLink>,{' '}
-          <BioLink href="https://shabados.com">ShabadOS</BioLink>, and{' '}
-          <BioLink href="https://sound.xyz">Sound</BioLink>. Previously, I was a
-          maintaining tooling at{' '}
-          <BioLink href="https://thegraph.com">The Graph</BioLink>. Check out my{' '}
-          <BioLink href="https://github.com/saihaj">Github</BioLink> for more.
+          I believe every small business deserves to be one of those names, not
+          just the ones with enterprise budgets. That's why I'm building{' '}
+          <BioLink href="https://rhetor.ai">Rhetor</BioLink>. Our flagship,{' '}
+          <BioLink href="https://www.lighthouselocal.ai">
+            Lighthouse Local
+          </BioLink>
+          , is where businesses and agencies manage their place in the AI era:
+          see where you stand, who's winning instead, what to fix first, and
+          track it all in one place. Around it, we build the rest of the stack:
+          agents that handle every call, chat, and follow-up, and custom
+          engineering for the AI that runs the operation underneath.
         </p>
         <p className={Paragraph}>
-          Beyond open source, I manage{' '}
-          <BioLink href="https://stellate.co">Stellate</BioLink>, the GraphQL
-          edge platform by{' '}
-          <BioLink href="https://the-guild.dev">The Guild</BioLink>, and support{' '}
-          <BioLink href="https://anyscale.com">Anyscale</BioLink> with Growth.
+          Before this, I was a founding engineer at{' '}
+          <BioLink href="https://sound.xyz">Sound</BioLink>, worked on growth
+          and product at <BioLink href="https://stellate.co">Stellate</BioLink>,
+          the GraphQL edge platform now part of{' '}
+          <BioLink href="https://the-guild.dev">The Guild</BioLink>, maintained
+          tooling at <BioLink href="https://thegraph.com">The Graph</BioLink>,
+          and supported <BioLink href="https://anyscale.com">Anyscale</BioLink>{' '}
+          with growth. I contribute to open source, including projects under{' '}
+          <BioLink href="https://the-guild.dev">The Guild</BioLink>,
+          <BioLink href="https://graphql.org">GraphQL</BioLink>, and{' '}
+          <BioLink href="https://shabados.com">ShabadOS</BioLink>. More on my{' '}
+          <BioLink href="https://github.com/saihaj">Github</BioLink>.
         </p>
         <p className={Paragraph}>
-          Get in touch on <BioLink href="https://x.com/saihaj">𝕏</BioLink>{' '}
-          or{' '}
+          Get in touch on <BioLink href="https://x.com/saihaj">𝕏</BioLink> or{' '}
           <BioLink href={`${deviceOpener}chat@saihaj.dev`}>
             chat@saihaj.dev
           </BioLink>
