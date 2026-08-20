@@ -49,21 +49,22 @@ export default function Home() {
       <div className={LayoutContainer}>
         <p className={Paragraph}>
           Every era of the internet has had its winners. Websites decided who
-          got found. Then search rankings. Then social. Now it's AI: when a
+          got found. Then search rankings. Then social. Now it's AI. When a
           customer asks ChatGPT for a recommendation, only a few names come up,
           and there's no page two.
         </p>
         <p className={Paragraph}>
           I believe every small business deserves to be one of those names, not
           just the ones with enterprise budgets. That's why I'm building{' '}
-          <BioLink href="https://rhetor.ai">Rhetor</BioLink>. Our flagship,{' '}
+          <BioLink href="https://rhetor.ai">Rhetor</BioLink>. Our flagship
+          offering,{' '}
           <BioLink href="https://www.lighthouselocal.ai">
             Lighthouse Local
           </BioLink>
-          , is where businesses and agencies manage their place in the AI era:
-          see where you stand, who's winning instead, what to fix first, and
-          track it all in one place. Around it, we build the rest of the stack:
-          agents that handle every call, chat, and follow-up, and custom
+          , is where businesses and agencies manage their place in the AI era.
+          See where you stand, who's winning instead, what to fix first, and
+          track it all in one place. Around it, we build the rest of the stack.
+          Agents that handle every call, chat, and follow-up, and custom
           engineering for the AI that runs the operation underneath.
         </p>
         <p className={Paragraph}>
@@ -72,10 +73,10 @@ export default function Home() {
           and product at <BioLink href="https://stellate.co">Stellate</BioLink>,
           the GraphQL edge platform now part of{' '}
           <BioLink href="https://the-guild.dev">The Guild</BioLink>, maintained
-          tooling at <BioLink href="https://thegraph.com">The Graph</BioLink>,
+          tooling at <BioLink href="https://thegraph.com">The Graph</BioLink>,{' '}
           and supported <BioLink href="https://anyscale.com">Anyscale</BioLink>{' '}
           with growth. I contribute to open source, including projects under{' '}
-          <BioLink href="https://the-guild.dev">The Guild</BioLink>,
+          <BioLink href="https://the-guild.dev">The Guild</BioLink>,{' '}
           <BioLink href="https://graphql.org">GraphQL</BioLink>, and{' '}
           <BioLink href="https://shabados.com">ShabadOS</BioLink>. More on my{' '}
           <BioLink href="https://github.com/saihaj">Github</BioLink>.
